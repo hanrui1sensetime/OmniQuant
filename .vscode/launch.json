@@ -1,0 +1,20 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            // "program": "generate_act_scale_shift.py",
+            // "args": ["--model", "/root/workspace/external_data/pjllama13bv8", "--calib_dataset", "custom", "--seq-len", "512"],
+            "program": "main.py",
+            "args": ["--calib_dataset", "custom", "--model", "/root/workspace/external_data/pjllama13bv8", "--epochs", "20", "--output_dir", "./omni_quant_lwc_let_w4a16g128_output", "--group_size", "128", "--wbits", "4", "--abits", "16", "--lwc", "--let", "--save_dir", "/home/OmniQuant/omni_quant_lwc_let_w4a16g128"],
+            "env": {"CUDA_VISIBLE_DEVICES": "0"},
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }
+    ]
+}
